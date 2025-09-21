@@ -9,7 +9,7 @@ class Signiture ():
   SHA256Obj = SHA256.Cipher()
 
   def determineHash(self):
-    message = input("input hash here: ")
+    message = input("input singiture here: ")
     return message
 
   def determineKeys(self):
@@ -24,7 +24,7 @@ class Signiture ():
     return {"a": verifiedkeyA, "b": verifiedkeyB}
 
   def signHash(self, hashedMessage:int, privateKey:dict[str,int]):
-    digitalSigniture = (hashedMessage ^ privateKey["A"]) % privateKey["B"]
+    digitalSigniture = (hashedMessage ^ privateKey["a"]) % privateKey["b"]
     digitalSigniture = hex(digitalSigniture)
     return digitalSigniture
 
