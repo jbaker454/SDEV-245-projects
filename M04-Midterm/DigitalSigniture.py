@@ -13,12 +13,12 @@ class Signiture ():
     return message
 
   def determineKeys(self):
-    keyA = input("input private key A")
-    keyB = input("input private key B")
-    verifiedkeyA = Verification.verify.validateInputRange(self.verifyObj,keyA,[0,1000^2])
+    keyA = input("input private key A: ")
+    keyB = input("input private key B: ")
+    verifiedkeyA = Verification.verify.validateInputRange(self.verifyObj,keyA,[0,1000000])
     if verifiedkeyA == None:
        return None
-    verifiedkeyB = Verification.verify.validateInputRange(self.verifyObj,keyB,[0,1000^2])
+    verifiedkeyB = Verification.verify.validateInputRange(self.verifyObj,keyB,[0,1000000])
     if verifiedkeyB == None:
        return None
     return {"a": verifiedkeyA, "b": verifiedkeyB}

@@ -11,7 +11,7 @@ class Cipher():
     return message
 
   def determineKey(self):
-    key = input("input key number betweeen 1-100")
+    key = input("input key number betweeen 1-100: ")
     verifiedInputProcess = Verification.verify.validateInputRange(self.verifyObj,key,[0,100])
     return verifiedInputProcess
 
