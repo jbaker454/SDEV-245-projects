@@ -1,11 +1,11 @@
 import re
 
 patterns: dict[str, str] = {
-    "base64": r"^(?:[A-Za-z0-9+/]{4})+(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$",
     "Twitter": r"\b[1-9][0-9]+-[0-9A-Za-z]{35,45}\b",
     "Facebook": r"EAACEdEose0cBA[0-9A-Za-z]+",
     "InstaGram": r"[0-9a-fA-F]{7}\.[0-9a-fA-F]{32}",
     "Google": r"\bAIza[0-9A-Za-z\-_]{33,37}\b",
+    "base64": r"^(?:[A-Za-z0-9+/]{4}){2,}(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$",
 }
 
 def checkForPatterns(fileText: str):
