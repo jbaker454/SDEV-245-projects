@@ -1,0 +1,3 @@
+Hello!
+This is a safe, normal text file.
+No patterns should be detected here.
